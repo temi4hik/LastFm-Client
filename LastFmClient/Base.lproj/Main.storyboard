@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gD5-9B-wJh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Pjw-hp-sTu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gD5-9B-wJh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nKS-WH-pfw">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FVP-u6-Spm" kind="relationship" relationship="rootViewController" id="f70-za-igz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fvv-ab-hcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="27"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="w1x-gG-8eP">
+            <objects>
+                <tableViewController id="FVP-u6-Spm" customClass="SearchViewController" customModule="LastFmClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iEU-PJ-3I0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="FVP-u6-Spm" id="h9z-yR-eTJ"/>
+                            <outlet property="delegate" destination="FVP-u6-Spm" id="aFt-ke-36Z"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ILl-OU-vaP"/>
+                    <connections>
+                        <segue destination="6bp-hn-mhr" kind="show" identifier="showDetailAlbum" id="yq9-Ms-Srf"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fbL-Tb-pyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="35"/>
+        </scene>
+        <!--Album View Controller-->
+        <scene sceneID="hYz-Uy-WkY">
+            <objects>
+                <tableViewController id="6bp-hn-mhr" customClass="AlbumViewController" customModule="LastFmClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DkV-Pa-D9z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="6bp-hn-mhr" id="uv9-41-PW9"/>
+                            <outlet property="delegate" destination="6bp-hn-mhr" id="7H8-Z7-G2E"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <segue destination="x8f-jE-b90" kind="show" identifier="showTrack" id="cOF-Om-qwv"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sby-3e-WUQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938" y="27"/>
+        </scene>
+        <!--Track View Controller-->
+        <scene sceneID="GhE-MM-IaE">
+            <objects>
+                <viewController id="x8f-jE-b90" customClass="TrackViewController" customModule="LastFmClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MRS-Ku-TXs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2b-9l-yud">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VeM-DI-ZrK" firstAttribute="bottom" secondItem="s2b-9l-yud" secondAttribute="bottom" id="I5I-zJ-bpi"/>
+                            <constraint firstItem="VeM-DI-ZrK" firstAttribute="trailing" secondItem="s2b-9l-yud" secondAttribute="trailing" id="SPi-9T-nEC"/>
+                            <constraint firstItem="s2b-9l-yud" firstAttribute="leading" secondItem="VeM-DI-ZrK" secondAttribute="leading" id="eZF-SE-VPr"/>
+                            <constraint firstItem="s2b-9l-yud" firstAttribute="top" secondItem="VeM-DI-ZrK" secondAttribute="top" id="z3n-hY-Mw2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VeM-DI-ZrK"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="s2b-9l-yud" id="dsc-cM-yFG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K4W-Im-G30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2837.5999999999999" y="25.637181409295355"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlbumHeaderCell" rowHeight="167" id="KGk-i7-Jjw" customClass="AlbumHeaderCell" customModule="LastFmClient" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="167"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="166.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="p57-hd-39F">
+                        <rect key="frame" x="16" y="11" width="145" height="145"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="145" id="Mrk-Vq-P3J"/>
+                            <constraint firstAttribute="width" constant="145" id="xMn-Iq-gVP"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Love Is Cool" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXo-32-vuB">
+                        <rect key="frame" x="169" y="11" width="121" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wolf Alice" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7E-2u-nOD">
+                        <rect key="frame" x="169" y="40" width="62" height="16.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <color key="textColor" name="systemRedColor" catalog="System" colorSpace="catalog"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tags" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-ki-MAA">
+                        <rect key="frame" x="169" y="73" width="151" height="20.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="p57-hd-39F" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1ca-Dg-SCR"/>
+                    <constraint firstItem="U7E-2u-nOD" firstAttribute="leading" secondItem="nXo-32-vuB" secondAttribute="leading" id="7ov-7m-11O"/>
+                    <constraint firstItem="nXo-32-vuB" firstAttribute="leading" secondItem="p57-hd-39F" secondAttribute="trailing" constant="8" id="EJJ-TR-5St"/>
+                    <constraint firstItem="ZmZ-ki-MAA" firstAttribute="leading" secondItem="p57-hd-39F" secondAttribute="trailing" constant="8" id="PiN-12-813"/>
+                    <constraint firstItem="U7E-2u-nOD" firstAttribute="top" secondItem="nXo-32-vuB" secondAttribute="bottom" constant="8" id="WK1-R1-IVD"/>
+                    <constraint firstItem="ZmZ-ki-MAA" firstAttribute="top" secondItem="U7E-2u-nOD" secondAttribute="bottom" constant="16.5" id="YgL-SA-cas"/>
+                    <constraint firstItem="p57-hd-39F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="cKg-Pf-fBI"/>
+                    <constraint firstAttribute="trailing" secondItem="ZmZ-ki-MAA" secondAttribute="trailing" id="d9r-j5-aKQ"/>
+                    <constraint firstItem="nXo-32-vuB" firstAttribute="top" secondItem="p57-hd-39F" secondAttribute="top" id="eFr-vr-8ya"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="albumArtistLabel" destination="U7E-2u-nOD" id="pI1-7G-CQ3"/>
+                <outlet property="albumImageView" destination="p57-hd-39F" id="G6B-26-T2h"/>
+                <outlet property="albumNameLabel" destination="nXo-32-vuB" id="by6-VM-HNX"/>
+                <outlet property="tagsLabel" destination="ZmZ-ki-MAA" id="swh-IA-MBo"/>
+            </connections>
+            <point key="canvasLocation" x="108.8" y="213.64317841079463"/>
+        </tableViewCell>
+    </objects>
+</document>
