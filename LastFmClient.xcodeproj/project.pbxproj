@@ -18,7 +18,6 @@
 		AC8D156922119E9700783B98 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D156722119E9700783B98 /* AlbumCell.swift */; };
 		AC8D156E22119F2E00783B98 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D156D22119F2E00783B98 /* NetworkManager.swift */; };
 		AC8D157222119F3A00783B98 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D157022119F3A00783B98 /* Track.swift */; };
-		AC8D157322119F3A00783B98 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D157122119F3A00783B98 /* Album.swift */; };
 		AC8D157722119FA300783B98 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D157622119FA300783B98 /* AlbumViewModel.swift */; };
 		AC8D15792211A2F600783B98 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D15782211A2F600783B98 /* AlbumViewController.swift */; };
 		AC8D15802211A32100783B98 /* AlbumHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8D157E2211A32100783B98 /* AlbumHeaderCell.xib */; };
@@ -28,6 +27,7 @@
 		AC8D15882211A45B00783B98 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8D15862211A45B00783B98 /* TrackCell.swift */; };
 		AC8D15892211A45B00783B98 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC8D15872211A45B00783B98 /* TrackCell.xib */; };
 		ACB9F21622199BDE00BC6638 /* TrackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9F21522199BDE00BC6638 /* TrackViewController.swift */; };
+		ACB9F21A221C5CDD00BC6638 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9F219221C5CDD00BC6638 /* Album.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,6 @@
 		AC8D156722119E9700783B98 /* AlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		AC8D156D22119F2E00783B98 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		AC8D157022119F3A00783B98 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
-		AC8D157122119F3A00783B98 /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		AC8D157622119FA300783B98 /* AlbumViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
 		AC8D15782211A2F600783B98 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		AC8D157E2211A32100783B98 /* AlbumHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumHeaderCell.xib; sourceTree = "<group>"; };
@@ -66,6 +65,7 @@
 		AC8D15862211A45B00783B98 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
 		AC8D15872211A45B00783B98 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		ACB9F21522199BDE00BC6638 /* TrackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewController.swift; sourceTree = "<group>"; };
+		ACB9F219221C5CDD00BC6638 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		B5B8E7A6ACFCF476A47E2BA5 /* Pods_LastFmClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LastFmClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0673EA04FF9738928C81881 /* Pods-LastFmClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LastFmClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-LastFmClient/Pods-LastFmClient.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8D157022119F3A00783B98 /* Track.swift */,
-				AC8D157122119F3A00783B98 /* Album.swift */,
+				ACB9F219221C5CDD00BC6638 /* Album.swift */,
 			);
 			name = Model;
 			path = "../../LastFm-Client/LastFm-Client/Model";
@@ -396,7 +396,7 @@
 				AC8D15792211A2F600783B98 /* AlbumViewController.swift in Sources */,
 				AC8D154522119DED00783B98 /* AppDelegate.swift in Sources */,
 				AC8D156922119E9700783B98 /* AlbumCell.swift in Sources */,
-				AC8D157322119F3A00783B98 /* Album.swift in Sources */,
+				ACB9F21A221C5CDD00BC6638 /* Album.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
